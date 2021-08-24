@@ -6,23 +6,22 @@
     <description>Recent content in 轉職數據分析師 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 23 Aug 2021 17:13:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 11:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>104人力銀行職缺爬蟲</title>
       <link>https://u3814520.github.io/blog/104etl/</link>
-      <pubDate>Mon, 23 Aug 2021 17:13:00 +0800</pubDate>
+      <pubDate>Tue, 24 Aug 2021 11:09:00 +0800</pubDate>
       
       <guid>https://u3814520.github.io/blog/104etl/</guid>
       <description>我的第一支爬蟲程式『104人力銀行職缺爬蟲』
 沒有商科背景、沒有理工科背景，
 程式語言學了一個多月的時間，
-這算是我第一支寫比較多行的程式語言了吧~
+這算是我第一支完整的程式語言了吧~
 動機其實是爬蟲老師的作業啦!!
-寫了整整三天，終於至少有樣子啦!!
+寫了整整四天，終於完成啦!!
 真是感謝緯育TibaMe讓我能學習新的技能
 也感謝緯育TibaMe的python老師、爬蟲老師
-雖然我最終想要呈現的目標，還沒有達到😭😭😭😭
-可能我寫程式的能力，還不夠</description>
+https://github.com/u3814520/work104</description>
     </item>
     
     <item>
