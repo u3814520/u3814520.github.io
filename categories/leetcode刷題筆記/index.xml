@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode刷題筆記 on ANN_BLOG</title>
+    <link>https://u3814520.github.io/categories/leetcode%E5%88%B7%E9%A1%8C%E7%AD%86%E8%A8%98/</link>
+    <description>Recent content in LeetCode刷題筆記 on ANN_BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 28 Aug 2021 12:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/leetcode%E5%88%B7%E9%A1%8C%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reverse Integer -Python解題</title>
+      <link>https://u3814520.github.io/blog/reverse-integer/</link>
+      <pubDate>Sat, 28 Aug 2021 12:09:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/reverse-integer/</guid>
+      <description>困難度:Easy
+題目: 簡單來說呢!就是將數字位置反轉。
+Given a signed 32-bit integer x, return x with its digits reversed.</description>
+    </item>
+    
+    <item>
+      <title>Two Sum -Python解題</title>
+      <link>https://u3814520.github.io/blog/two-sum/</link>
+      <pubDate>Sat, 28 Aug 2021 11:09:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/two-sum/</guid>
+      <description>困難度:Easy
+題目: 找出兩個數字的索引相加會等於目標數字。
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="加入外送員">
+  <meta name="description" content="LeetCode刷題筆記-Two Sum">
   <meta name="author" content="巧庭_Ann">
   <meta name="generator" content="Hugo 0.87.0" />
 
@@ -115,35 +115,57 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <a href="/categories/%e6%89%93%e5%b7%a5%e4%bb%94%e7%94%9f%e6%b4%bb"
-          class="text-primary">打工仔生活</a>
+        <a href="/categories/leetcode%e5%88%b7%e9%a1%8c%e7%ad%86%e8%a8%98"
+          class="text-primary">Leet code刷題筆記</a>
         
-        <h2>兼差外送，找生路XD</h2>
+        <h2>Two Sum -Python解題</h2>
         <div class="mb-3 post-meta">
           <span>By 巧庭_Ann</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>20 July 2021</span>
+          <span>28 August 2021</span>
           
         </div>
         
-        <img src="https://u3814520.github.io/images/post/S__29900805.jpg" class="img-fluid w-100 mb-4" alt="兼差外送，找生路XD">
-        
         <div class="content mb-5">
-          <p>今年疫情嚴峻，部分工作停擺，但該繳的費用不會停擺╥﹏╥</p>
-<p>🛵於是我決定<strong>加入外送員</strong>，做個兼差。</p>
-<p>身為現代人，當然先上網搜尋一下加入哪家外送平台的外送員好呢?</p>
-<p>好像多數人覺得foodpanda比較好(外送員的部分)</p>
-<p>也是覺得foodpanda有送生鮮雜貨，不限用餐時間也有單(當時是這麼想的啦~)</p>
-<p>前後大概花了一個禮拜的時間順利拿到當任外送員資格，終於可以上線啦~~💪</p>
-<p>上線前，我大概想像了好多好多外送時會遇到的情況，</p>
-<p>比如被開發單、不小心打翻食物、遇到奧客等等</p>
-<p>沒想到實際上線後，我是多慮了，</p>
-<h4 id="消費者都是善良的啦">消費者都是善良的啦🤗</h4>
-<p>今天是第一次收到<strong>foodpanda的薪水</strong>，特別興奮!!!!😁😁😁😁</p>
-<p>就來分享我的薪水明細吧~~~</p>
-<h4 id="對了foodpanda是半個月發一次薪水哦">對了!!foodpanda是半個月發一次薪水哦~~</h4>
-<p><img src="/images/post/S__29900804.jpg" alt="image"></p>
+          <p>困難度:Easy</p>
+<p>題目: 找出兩個數字的索引相加會等於目標數字。</p>
+<p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>You can return the answer in any order.</p>
+<h6 id="example-1">Example 1:</h6>
+<blockquote>
+<p>Input: nums = [2,7,11,15], target = 9</p>
+<p>Output: [0,1]</p>
+<p>Output: Because nums[0] + nums[1] == 9</p>
+<p>we return [0, 1].</p>
+</blockquote>
+<h6 id="example-2">Example 2:</h6>
+<blockquote>
+<p>Input: nums = [3,2,4], target = 6</p>
+<p>Output: [1,2]</p>
+</blockquote>
+<h6 id="example-3">Example 3:</h6>
+<blockquote>
+<p>Input: nums = [3,3], target = 6</p>
+<p>Output: [0,1]</p>
+</blockquote>
+<h3 id="python解題筆記">Python解題筆記</h3>
+<blockquote>
+<p>class Solution:
+def twoSum(self, nums: List[int], target: int) -&gt; List[int]:</p>
+<pre><code>    for i in range(0,len(nums)):
+
+        for j in range(i+1,len(nums)):
+
+            a = nums[i]+nums[j]
+
+            if a == target:
+
+                return [i,j]
+</code></pre>
+</blockquote>
+<p><a href="https://leetcode.com/problems/two-sum">題目原處-LeetCode</a></p>
 
         </div>
 
