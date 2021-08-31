@@ -6,7 +6,40 @@
     <description>Recent content on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 28 Aug 2021 12:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Aug 2021 11:09:47 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Longest Common Prefix -Python解題</title>
+      <link>https://u3814520.github.io/blog/longest-common-prefix/</link>
+      <pubDate>Mon, 30 Aug 2021 11:09:47 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/longest-common-prefix/</guid>
+      <description>困難度:Easy
+題目: 在一系列字串中，找出相同的前綴字，如都沒有，則打印空字串。
+Write a function to find the longest common prefix string amongst an array of strings.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Number -Python解題</title>
+      <link>https://u3814520.github.io/blog/palindrome-number/</link>
+      <pubDate>Sun, 29 Aug 2021 11:09:47 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/palindrome-number/</guid>
+      <description>困難度:Easy
+題目: x為整數，如果x前後都是一的數字就為Ture，反之為False。
+Given an integer x, return true if x is palindrome integer.</description>
+    </item>
+    
+    <item>
+      <title>Roman to Integer -Python解題</title>
+      <link>https://u3814520.github.io/blog/roman-to-integer/</link>
+      <pubDate>Sun, 29 Aug 2021 10:10:47 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/roman-to-integer/</guid>
+      <description>困難度:Easy
+題目: 羅馬字轉換阿拉伯數字。
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</description>
+    </item>
+    
     <item>
       <title>Reverse Integer -Python解題</title>
       <link>https://u3814520.github.io/blog/reverse-integer/</link>
@@ -122,6 +155,15 @@ I wish you happiness.
 士林騎腳踏車到淡水 感謝我朋友當我的導遊
 哈哈哈~我是小路癡~
 其實是懶，跟人家走，不用研究路線 🤣🤣🤣</description>
+    </item>
+    
+    <item>
+      <title>How To Use Checklists To Improve Your UX</title>
+      <link>https://u3814520.github.io/blog/post-13/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/post-13/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     
     <item>

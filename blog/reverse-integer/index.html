@@ -132,6 +132,10 @@
 <p>題目: 簡單來說呢!就是將數字位置反轉。</p>
 <p>Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.</p>
 <p>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</p>
+<h6 id="constraints">Constraints:</h6>
+<blockquote>
+<p>-231 &lt;= x &lt;= 231 - 1</p>
+</blockquote>
 <h6 id="example-1">Example 1:</h6>
 <blockquote>
 <p>Input: x = 123</p>
@@ -153,36 +157,23 @@
 <p>Output: 0</p>
 </blockquote>
 <h3 id="python解題筆記">Python解題筆記</h3>
-<blockquote>
-<p>class Solution:</p>
-<pre><code>def reverse(self, x: int) -&gt; int:
-
-    num=0
-
-    a=abs(x)
-
-    while(a != 0):
-
-        temp = a % 10 
-
-        num =num * 10 + temp  
-
-        a=int(a/10)       
-
-    if x&gt;0 and num &lt;2147483647:
-
-        return num
-
-    elif x &lt; 0 and num &lt;= 2147483647:
-
-        return -num
-
-    else:
-
-        return 0
-</code></pre>
-</blockquote>
-<p><a href="https://leetcode.com/problems/reverse-integer">題目原處-LeetCode</a></p>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Solution</span>:
+    <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">reverse</span>(self, x):
+        num=<span style="color:#b452cd">0</span>
+        a=<span style="color:#658b00">abs</span>(x)
+        <span style="color:#8b008b;font-weight:bold">while</span>(a != <span style="color:#b452cd">0</span>):
+            temp = a % <span style="color:#b452cd">10</span> 
+            num =num * <span style="color:#b452cd">10</span> + temp
+            a=<span style="color:#658b00">int</span>(a/<span style="color:#b452cd">10</span>)
+        <span style="color:#8b008b;font-weight:bold">if</span> x&gt;<span style="color:#b452cd">0</span> <span style="color:#8b008b">and</span> num &lt;<span style="color:#b452cd">2147483647</span>:
+            <span style="color:#8b008b;font-weight:bold">return</span> num
+        <span style="color:#8b008b;font-weight:bold">elif</span> x &lt; <span style="color:#b452cd">0</span> <span style="color:#8b008b">and</span> num &lt;= <span style="color:#b452cd">2147483647</span>:
+            <span style="color:#8b008b;font-weight:bold">return</span> -num
+        <span style="color:#8b008b;font-weight:bold">else</span>:
+            <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">0</span>
+        
+</code></pre></div><p><a href="https://leetcode.com/problems/reverse-integer">題目原處-LeetCode</a></p>
 
         </div>
 
@@ -211,6 +202,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 
 
 
