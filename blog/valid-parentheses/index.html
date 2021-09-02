@@ -163,7 +163,7 @@
 <p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">Solution</span>:
     <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">isValid</span>(self, s):
-        temp=[<span style="color:#8b008b;font-weight:bold">None</span>]
+        temp=[<span style="color:#cd5555">&#39;temp&#39;</span>]
         tempdist={<span style="color:#cd5555">&#39;)&#39;</span>:<span style="color:#cd5555">&#39;(&#39;</span>,<span style="color:#cd5555">&#39;}&#39;</span>:<span style="color:#cd5555">&#39;{&#39;</span>,<span style="color:#cd5555">&#39;]&#39;</span>:<span style="color:#cd5555">&#39;[&#39;</span>}
         <span style="color:#8b008b;font-weight:bold">for</span> i <span style="color:#8b008b">in</span> s:
             <span style="color:#8b008b;font-weight:bold">if</span> i <span style="color:#8b008b">in</span> tempdist <span style="color:#8b008b">and</span> tempdist[i]==temp[<span style="color:#658b00">len</span>(temp)-<span style="color:#b452cd">1</span>]:
