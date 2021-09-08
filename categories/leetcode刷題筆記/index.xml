@@ -64,10 +64,10 @@ Given a signed 32-bit integer x, return x with its digits reversed.</description
     
     <item>
       <title>Two Sum -Python解題</title>
-      <link>https://u3814520.github.io/blog/leetcode1/</link>
+      <link>https://u3814520.github.io/blog/two-sum/</link>
       <pubDate>Sat, 28 Aug 2021 11:09:00 +0800</pubDate>
       
-      <guid>https://u3814520.github.io/blog/leetcode1/</guid>
+      <guid>https://u3814520.github.io/blog/two-sum/</guid>
       <description>困難度:Easy
 題目: 找出兩個數字的索引相加會等於目標數字。
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</description>
