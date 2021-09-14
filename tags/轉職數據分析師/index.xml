@@ -6,7 +6,22 @@
     <description>Recent content in 轉職數據分析師 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 24 Aug 2021 11:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Sep 2021 11:49:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>line Bot 大樂透兌獎-Azure圖像辨識</title>
+      <link>https://u3814520.github.io/blog/linebot/</link>
+      <pubDate>Tue, 14 Sep 2021 11:49:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/linebot/</guid>
+      <description>進入滿滿程式碼的世界兩個月，
+最近又有一個小作品啦~~
+距離大學畢業後，再也沒有團隊合作做作業了，
+這是一個Azure的小作品
+  起初大家不知道要做什麼題目，
+在討論聊天的過程中，一位同學說了最近大樂透頭獎累積到27億，上課前去買了一張，
+於是就有同學說:我們就來做大樂透對獎結合Azure圖像辨識，並在line bot呈現吧!!!</description>
+    </item>
+    
     <item>
       <title>104人力銀行職缺爬蟲</title>
       <link>https://u3814520.github.io/blog/104etl/</link>
