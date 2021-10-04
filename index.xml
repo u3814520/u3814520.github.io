@@ -6,7 +6,20 @@
     <description>Recent content on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 14 Sep 2021 11:49:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 21:55:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kaggle-共享單車需求預測</title>
+      <link>https://u3814520.github.io/blog/kagglebike/</link>
+      <pubDate>Wed, 22 Sep 2021 21:55:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/kagglebike/</guid>
+      <description>Python 資料分析＆機器學習入門_學習紀錄 在這自學的時代，
+最近剛學了Data Mining
+當然最近也才知道kaggle這個數據建模和數據分析競賽平臺，
+又搜尋到一個免費試看跟著影片做，從中學習的共享單車需求預測
+先貼kaggle競賽網址→ → → → Bike Sharing Demand ← ← ← ←</description>
+    </item>
+    
     <item>
       <title>line Bot 大樂透兌獎-Azure圖像辨識</title>
       <link>https://u3814520.github.io/blog/linebot/</link>
@@ -123,7 +136,7 @@ Hello World.是學程式語言的第一句話
     </item>
     
     <item>
-      <title>[分享]Github免費架設個人網站-</title>
+      <title>[分享]Github免費架設個人網站</title>
       <link>https://u3814520.github.io/blog/personal-website/</link>
       <pubDate>Fri, 06 Aug 2021 11:40:00 +0800</pubDate>
       
