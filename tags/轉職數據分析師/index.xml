@@ -6,7 +6,19 @@
     <description>Recent content in 轉職數據分析師 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 22 Sep 2021 21:55:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Oct 2021 21:53:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python專案和套件打包-上傳PYPI</title>
+      <link>https://u3814520.github.io/blog/pypi-packaging/</link>
+      <pubDate>Sat, 16 Oct 2021 21:53:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/pypi-packaging/</guid>
+      <description>官方文件說明  ======
+第一次打包要做的事 註冊並登入PYPI帳號
+1.到Account settings裡，新增API tokens
+2.複製 tokens</description>
+    </item>
+    
     <item>
       <title>kaggle-共享單車需求預測</title>
       <link>https://u3814520.github.io/blog/kagglebike/</link>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>ANN_BLOG</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Packaging and distributing projects">
+  <meta name="author" content="巧庭_Ann">
+  <meta name="generator" content="Hugo 0.87.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-205131547-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://u3814520.github.io"><img class="img-fluid"
+          src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/u3814520"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/u3814520"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://u3814520.github.io"><img class="img-fluid"
+            src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://u3814520.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://u3814520.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/%e8%bd%89%e8%81%b7%e5%bf%83%e8%b7%af%e6%ad%b7%e7%a8%8b"
+          class="text-primary">轉職心路歷程</a>
+        
+        <h2>Python專案和套件打包-上傳PYPI</h2>
+        <div class="mb-3 post-meta">
+          <span>By 巧庭_Ann</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>16 October 2021</span>
+          
+        </div>
+        
+        <img src="https://u3814520.github.io/images/post/1634383822047.jpg" class="img-fluid w-100 mb-4" alt="Python專案和套件打包-上傳PYPI">
+        
+        <div class="content mb-5">
+          <ul>
+<li><a href="https://packaging.python.org/guides/distributing-packages-using-setuptools/">官方文件說明</a></li>
+</ul>
+<p>======</p>
+<h3 id="第一次打包要做的事">第一次打包要做的事</h3>
+<p><a href="https://pypi.org/account/register/">註冊並登入PYPI帳號</a></p>
+<p>1.到Account settings裡，新增API tokens</p>
+<p>2.複製 tokens</p>
+<p>3.在%HOMEPATH%目錄下新增.pypirc檔，並貼入以下文字(username = <strong>token</strong>  不用改)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[pypi]
+username = __token__
+password = &lt;貼上 API tokens&gt;
+</code></pre></div><p><img src="/images/post/1016.png" alt="image"></p>
+<h5 id="如非第一次打包上傳以上可以跳過">=======如非第一次打包上傳，以上可以跳過=======</h5>
+<p>==================================================</p>
+<h3 id="1所需安裝的套件有兩個套件">1.所需安裝的套件(有兩個套件)</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install twine
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install wheel
+</code></pre></div><blockquote>
+<p>備註:如果專案裡有資料夾，每個資料夾都要有__init__.py檔案，才會被打包進去</p>
+</blockquote>
+<h3 id="2新增setuppy檔">2.新增setup.py檔:</h3>
+<p><img src="/images/post/1016-2.png" alt="image"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#228b22">#!/usr/bin/env python</span>
+<span style="color:#228b22"># -*- coding: utf-8 -*-</span>
+
+<span style="color:#228b22"># Note: To use the &#39;upload&#39; functionality of this file, you must:</span>
+<span style="color:#228b22">#   $ pipenv install twine --dev</span>
+
+<span style="color:#8b008b;font-weight:bold">import</span> <span style="color:#008b45;text-decoration:underline">io</span>
+<span style="color:#8b008b;font-weight:bold">import</span> <span style="color:#008b45;text-decoration:underline">os</span>
+<span style="color:#8b008b;font-weight:bold">import</span> <span style="color:#008b45;text-decoration:underline">sys</span>
+<span style="color:#8b008b;font-weight:bold">from</span> <span style="color:#008b45;text-decoration:underline">shutil</span> <span style="color:#8b008b;font-weight:bold">import</span> rmtree
+
+<span style="color:#8b008b;font-weight:bold">from</span> <span style="color:#008b45;text-decoration:underline">setuptools</span> <span style="color:#8b008b;font-weight:bold">import</span> find_packages, setup, Command
+
+<span style="color:#228b22"># Package meta-data.</span>
+NAME = <span style="color:#cd5555">&#39;WebCrawleEslite&#39;</span>           <span style="color:#228b22"># PYPY上的名稱</span>
+DESCRIPTION = <span style="color:#cd5555">&#39;bookstore WebCrawle Eslite&#39;</span>  <span style="color:#228b22">#  短說明</span>
+URL = <span style="color:#cd5555">&#39;https://github.com/test/test&#39;</span>      <span style="color:#228b22"># 專案網址</span>
+EMAIL = <span style="color:#cd5555">&#39;test@gmail.com&#39;</span>         <span style="color:#228b22"># 信箱</span>
+AUTHOR = <span style="color:#cd5555">&#39;chiao ting&#39;</span>              <span style="color:#228b22"># 作者</span>
+REQUIRES_PYTHON = <span style="color:#cd5555">&#39;&gt;=3.6.0&#39;</span>      <span style="color:#228b22"># python 版本</span>
+VERSION = <span style="color:#cd5555">&#39;0.1.0&#39;</span>                <span style="color:#228b22"># 版本(更新版本需改變)</span>
+
+<span style="color:#228b22"># What packages are required for this module to be executed?  # 專案需要哪些套件</span>
+REQUIRED = [
+    <span style="color:#cd5555">&#39;requests&#39;</span>, <span style="color:#cd5555">&#39;pandas&#39;</span>, <span style="color:#cd5555">&#39;fake_useragent&#39;</span>,<span style="color:#cd5555">&#39;bs4&#39;</span>,
+]
+
+<span style="color:#228b22"># What packages are optional?</span>
+EXTRAS = {
+    <span style="color:#228b22"># &#39;fancy feature&#39;: [&#39;django&#39;],</span>
+}
+
+<span style="color:#228b22"># The rest you shouldn&#39;t have to touch too much :)   # 以下不需調整</span>
+<span style="color:#228b22"># ------------------------------------------------</span>
+<span style="color:#228b22"># Except, perhaps the License and Trove Classifiers!</span>
+<span style="color:#228b22"># If you do change the License, remember to change the Trove Classifier for that!</span>
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+<span style="color:#228b22"># Import the README and use it as the long-description.</span>
+<span style="color:#228b22"># Note: this will only work if &#39;README.md&#39; is present in your MANIFEST.in file!</span>
+<span style="color:#8b008b;font-weight:bold">try</span>:
+    <span style="color:#8b008b;font-weight:bold">with</span> io.open(os.path.join(here, <span style="color:#cd5555">&#39;README.md&#39;</span>), encoding=<span style="color:#cd5555">&#39;utf-8&#39;</span>) <span style="color:#8b008b;font-weight:bold">as</span> f:     <span style="color:#228b22"># 有需要長版說明可以寫在README.md</span>
+        long_description = <span style="color:#cd5555">&#39;</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">&#39;</span> + f.read()
+<span style="color:#8b008b;font-weight:bold">except</span> <span style="color:#008b45;font-weight:bold">FileNotFoundError</span>:
+    long_description = DESCRIPTION
+
+<span style="color:#228b22"># Load the package&#39;s __version__.py module as a dictionary.</span>
+about = {}
+<span style="color:#8b008b;font-weight:bold">if</span> <span style="color:#8b008b">not</span> VERSION:
+    project_slug = NAME.lower().replace(<span style="color:#cd5555">&#34;-&#34;</span>, <span style="color:#cd5555">&#34;_&#34;</span>).replace(<span style="color:#cd5555">&#34; &#34;</span>, <span style="color:#cd5555">&#34;_&#34;</span>)
+    <span style="color:#8b008b;font-weight:bold">with</span> <span style="color:#658b00">open</span>(os.path.join(here, project_slug, <span style="color:#cd5555">&#39;__version__.py&#39;</span>)) <span style="color:#8b008b;font-weight:bold">as</span> f:
+        exec(f.read(), about)
+<span style="color:#8b008b;font-weight:bold">else</span>:
+    about[<span style="color:#cd5555">&#39;__version__&#39;</span>] = VERSION
+
+
+<span style="color:#8b008b;font-weight:bold">class</span> <span style="color:#008b45;font-weight:bold">UploadCommand</span>(Command):
+    <span style="color:#cd5555">&#34;&#34;&#34;Support setup.py upload.&#34;&#34;&#34;</span>
+
+    description = <span style="color:#cd5555">&#39;Build and publish the package.&#39;</span>
+    user_options = []
+
+    <span style="color:#707a7c">@staticmethod</span>
+    <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">status</span>(s):
+        <span style="color:#cd5555">&#34;&#34;&#34;Prints things in bold.&#34;&#34;&#34;</span>
+        <span style="color:#658b00">print</span>(<span style="color:#cd5555">&#39;</span><span style="color:#cd5555">\033</span><span style="color:#cd5555">[1m</span><span style="color:#cd5555">{0}</span><span style="color:#cd5555">\033</span><span style="color:#cd5555">[0m&#39;</span>.format(s))
+
+    <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">initialize_options</span>(self):
+        <span style="color:#8b008b;font-weight:bold">pass</span>
+
+    <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">finalize_options</span>(self):
+        <span style="color:#8b008b;font-weight:bold">pass</span>
+
+    <span style="color:#8b008b;font-weight:bold">def</span> <span style="color:#008b45">run</span>(self):
+        <span style="color:#8b008b;font-weight:bold">try</span>:
+            self.status(<span style="color:#cd5555">&#39;Removing previous builds…&#39;</span>)
+            rmtree(os.path.join(here, <span style="color:#cd5555">&#39;dist&#39;</span>))
+        <span style="color:#8b008b;font-weight:bold">except</span> <span style="color:#008b45;font-weight:bold">OSError</span>:
+            <span style="color:#8b008b;font-weight:bold">pass</span>
+
+        self.status(<span style="color:#cd5555">&#39;Building Source and Wheel (universal) distribution…&#39;</span>)
+        os.system(<span style="color:#cd5555">&#39;</span><span style="color:#cd5555">{0}</span><span style="color:#cd5555"> setup.py sdist bdist_wheel --universal&#39;</span>.format(sys.executable))
+
+        self.status(<span style="color:#cd5555">&#39;Uploading the package to PyPI via Twine…&#39;</span>)
+        os.system(<span style="color:#cd5555">&#39;twine upload dist/*&#39;</span>)
+
+        self.status(<span style="color:#cd5555">&#39;Pushing git tags…&#39;</span>)
+        os.system(<span style="color:#cd5555">&#39;git tag v</span><span style="color:#cd5555">{0}</span><span style="color:#cd5555">&#39;</span>.format(about[<span style="color:#cd5555">&#39;__version__&#39;</span>]))
+        os.system(<span style="color:#cd5555">&#39;git push --tags&#39;</span>)
+
+        sys.exit()
+
+
+<span style="color:#228b22"># Where the magic happens:</span>
+setup(
+    name=NAME,
+    version=about[<span style="color:#cd5555">&#39;__version__&#39;</span>],
+    description=DESCRIPTION,
+    long_description=long_description,
+    long_description_content_type=<span style="color:#cd5555">&#39;text/markdown&#39;</span>,
+    author=AUTHOR,
+    author_email=EMAIL,
+    python_requires=REQUIRES_PYTHON,
+    url=URL,
+    packages=find_packages(exclude=[<span style="color:#cd5555">&#34;tests&#34;</span>, <span style="color:#cd5555">&#34;*.tests&#34;</span>, <span style="color:#cd5555">&#34;*.tests.*&#34;</span>, <span style="color:#cd5555">&#34;tests.*&#34;</span>]),
+    <span style="color:#228b22"># If your package is a single module, use this instead of &#39;packages&#39;:</span>
+    <span style="color:#228b22"># py_modules=[&#39;mypackage&#39;],</span>
+
+    <span style="color:#228b22"># entry_points={</span>
+    <span style="color:#228b22">#     &#39;console_scripts&#39;: [&#39;mycli=mymodule:cli&#39;],</span>
+    <span style="color:#228b22"># },</span>
+    install_requires=REQUIRED,
+    extras_require=EXTRAS,
+    include_package_data=<span style="color:#8b008b;font-weight:bold">True</span>,
+    license=<span style="color:#cd5555">&#39;MIT&#39;</span>,
+    classifiers=[
+        <span style="color:#228b22"># Trove classifiers</span>
+        <span style="color:#228b22"># Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers</span>
+        <span style="color:#cd5555">&#39;License :: OSI Approved :: MIT License&#39;</span>,
+        <span style="color:#cd5555">&#39;Programming Language :: Python&#39;</span>,
+        <span style="color:#cd5555">&#39;Programming Language :: Python :: 3&#39;</span>,
+        <span style="color:#cd5555">&#39;Programming Language :: Python :: 3.6&#39;</span>,
+        <span style="color:#cd5555">&#39;Programming Language :: Python :: Implementation :: CPython&#39;</span>,
+        <span style="color:#cd5555">&#39;Programming Language :: Python :: Implementation :: PyPy&#39;</span>
+    ],
+    <span style="color:#228b22"># $ setup.py publish support.</span>
+    cmdclass={
+        <span style="color:#cd5555">&#39;upload&#39;</span>: UploadCommand,
+    },
+)
+</code></pre></div><p><a href="https://github.com/navdeep-G/setup.py">setup.py引用來源</a></p>
+<h3 id="3封裝有兩個指令須執行">3.封裝:(有兩個指令須執行)</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python setup.py sdist
+</code></pre></div><blockquote>
+<p>備註:執行出現 no module named &lsquo;setuptools&rsquo; 
+<a href="https://github.com/u3814520/PYPI-Packaging/blob/main/ez_python.py">請執行ez_python.py</a></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python setup.py bdist_wheel
+</code></pre></div><h3 id="4上傳到pypi上">4.上傳到PYPI上</h3>
+<p>開啟CMD，到專案資料夾下輸入指令:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">twine upload dist/*
+</code></pre></div><p>完成後，複製View at:的網址</p>
+<p>就可以看到自己打包的專案了~</p>
+<h6 id="建立新的環境測試一下">*建立新的環境測試一下:</h6>
+<p>pip install &lt;自己打包的套件&gt;</p>
+<p>就會發現py檔都在新建立的環境資料夾裡了</p>
+<p><img src="/images/post/1016-1.png" alt="image"></p>
+<p>=====打包前補充，不新增也不影響上傳打包=====</p>
+<p>License說明:</p>
+<p><a href="https://choosealicense.com/">https://choosealicense.com/</a></p>
+<ol>
+<li>
+<p>建立LICENSE.txt</p>
+</li>
+<li>
+<p>複製許可證內容並在LICENSE.txt貼上</p>
+</li>
+</ol>
+<p><img src="/images/post/1634395052179.jpg" alt="image"></p>
+
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var indexURL = "https://u3814520.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://u3814520.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/mark.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://u3814520.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
