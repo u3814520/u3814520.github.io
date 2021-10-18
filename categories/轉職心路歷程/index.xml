@@ -6,7 +6,18 @@
     <description>Recent content in 轉職心路歷程 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 16 Oct 2021 21:53:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/%E8%BD%89%E8%81%B7%E5%BF%83%E8%B7%AF%E6%AD%B7%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/%E8%BD%89%E8%81%B7%E5%BF%83%E8%B7%AF%E6%AD%B7%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 Docker 架設 Elasticsearch &#43; Kibana</title>
+      <link>https://u3814520.github.io/blog/elasticsearch/</link>
+      <pubDate>Mon, 18 Oct 2021 14:23:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/elasticsearch/</guid>
+      <description>========================
+github直接下載也可以 ========================
+1.新增兩個檔案 檔名為docker-compose.yml version: &amp;#39;2.2&amp;#39; services: es01: image: docker.</description>
+    </item>
+    
     <item>
       <title>Python專案和套件打包-上傳PYPI</title>
       <link>https://u3814520.github.io/blog/pypi-packaging/</link>
