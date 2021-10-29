@@ -6,25 +6,7 @@
     <description>Recent content in Blogs on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 29 Oct 2021 20:25:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>送不出去的禮物</title>
-      <link>https://u3814520.github.io/blog/hwaiwei_hbd/</link>
-      <pubDate>Fri, 29 Oct 2021 20:25:00 +0800</pubDate>
-      
-      <guid>https://u3814520.github.io/blog/hwaiwei_hbd/</guid>
-      <description>今天是你的生日，
-從我們認識，每一年我都有準備你的生日禮物，
-真的沒有一年，我有勇氣送出去，
-就算你從我眼前走過去，我都沒有勇氣靠近你&amp;hellip;
-不管現在你過什麼樣的生活，
-在我心裡，還是祝福著你健康與快樂。
-也許在你心裡，我從來都不是一回事，
-這麼多年來，始終想不通為什麼老天讓我們相識&amp;hellip;
-你永遠是我心中的秘密&amp;hellip;
-Je t’aime.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 18 Oct 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用 Docker 架設 Elasticsearch &#43; Kibana</title>
       <link>https://u3814520.github.io/blog/elasticsearch/</link>
