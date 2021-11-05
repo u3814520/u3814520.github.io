@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Elasticsearch-Kibana_yml">
+  <meta name="description" content="聖誕歌曲用OpenCV包裝特效">
   <meta name="author" content="巧庭_Ann">
   <meta name="generator" content="Hugo 0.87.0" />
 
@@ -118,133 +118,30 @@
         <a href="/categories/%e8%bd%89%e8%81%b7%e5%bf%83%e8%b7%af%e6%ad%b7%e7%a8%8b"
           class="text-primary">轉職心路歷程</a>
         
-        <h2>用 Docker 架設 Elasticsearch + Kibana</h2>
+        <h2>OpenCV特效影片</h2>
         <div class="mb-3 post-meta">
           <span>By 巧庭_Ann</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 October 2021</span>
+          <span>05 November 2021</span>
           
         </div>
         
-        <img src="https://u3814520.github.io/images/post/S__40222723.jpg" class="img-fluid w-100 mb-4" alt="用 Docker 架設 Elasticsearch &#43; Kibana">
+        <img src="https://u3814520.github.io/images/post/OPENCV.png" class="img-fluid w-100 mb-4" alt="OpenCV特效影片">
         
         <div class="content mb-5">
-          <p>========================</p>
-<h5 id="github直接下載也可以httpsgithubcomu3814520elasticsearch-kibana_yml"><a href="https://github.com/u3814520/Elasticsearch-kibana_yml">github直接下載也可以</a></h5>
-<p>========================</p>
-<h3 id="1新增兩個檔案">1.新增兩個檔案</h3>
-<h4 id="檔名為docker-composeyml">檔名為docker-compose.yml</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">version: <span style="color:#cd5555">&#39;2.2&#39;</span>
-services:
-  es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:<span style="color:#b452cd">7.14.1</span>
-    restart: on-failure
-    container_name: es01
-    environment:
-      - node.name=es01
-      - cluster.name=es-docker-cluster
-      - discovery.seed_hosts=es02
-      - cluster.initial_master_nodes=es01,es02
-      - bootstrap.memory_lock=true
-      - <span style="color:#cd5555">&#34;ES_JAVA_OPTS=-Xms512m -Xmx512m&#34;</span>
-    ulimits:
-      memlock:
-        soft: -<span style="color:#b452cd">1</span>
-        hard: -<span style="color:#b452cd">1</span>
-    volumes:
-      - data01:/usr/share/elasticsearch/data
-    ports:
-      - <span style="color:#b452cd">9200</span>:<span style="color:#b452cd">9200</span>
-    networks:
-      - elastic
-  es02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:<span style="color:#b452cd">7.14.1</span>
-    container_name: es02
-    depends_on:
-      - <span style="color:#cd5555">&#34;es01&#34;</span>
-    restart: on-failure
-    environment:
-      - node.name=es02
-      - cluster.name=es-docker-cluster
-      - discovery.seed_hosts=es01
-      - cluster.initial_master_nodes=es01,es02
-      - bootstrap.memory_lock=true
-      - <span style="color:#cd5555">&#34;ES_JAVA_OPTS=-Xms512m -Xmx512m&#34;</span>
-    ulimits:
-      memlock:
-        soft: -<span style="color:#b452cd">1</span>
-        hard: -<span style="color:#b452cd">1</span>
-    volumes:
-      - data02:/usr/share/elasticsearch/data
-    ports:
-      - <span style="color:#b452cd">9201</span>:<span style="color:#b452cd">9200</span>
-    networks:
-      - elastic
-  kibana:
-    image: docker.elastic.co/kibana/kibana:<span style="color:#b452cd">7.14.1</span>
-    container_name: kibana
-    depends_on:
-      - <span style="color:#cd5555">&#34;es02&#34;</span>
-    restart: on-failure
-    volumes:
-      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
-    networks:
-      - elastic
-    ports:
-      - <span style="color:#b452cd">5601</span>:<span style="color:#b452cd">5601</span>
+          <p>轉職學習之路第四個月，來談談OpenCV，</p>
+<p>最近上課教了一些OpenCV效果，</p>
+<p>決定玩玩看結合在一支影片裡，</p>
+<p>想起去年聖誕節前的剪接師日子，剪接似曾相識的節目，其中一首是瑪麗亞凱莉的《All I Want For Christmas Is You》</p>
+<p>我覺得非常好聽，</p>
+<p>就用這首歌小玩玩看OpenCV吧~~</p>
 
-volumes:
-  data01:
-    driver: local
-  data02:
-    driver: local
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/NZQVrdiXdHU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
-networks:
-  elastic:
-    driver: bridge
-</code></pre></div><h4 id="檔名為kibanayml">檔名為kibana.yml</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">server.name: kibana
-server.host: <span style="color:#b452cd">0.0.0.0</span>
-elasticsearch.hosts: [<span style="color:#cd5555">&#34;http://es01:9200&#34;</span>, <span style="color:#cd5555">&#34;http://es02:9200&#34;</span>]
-monitoring.enabled: true
-</code></pre></div><h3 id="2輸入指令">2.輸入指令:</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker-compose up
-</code></pre></div><p><img src="/images/post/1018.png" alt="image"></p>
-<p>等待架設~~~~</p>
-<h3 id="3錯誤解決">3.錯誤解決:</h3>
-<h5 id="max-virtual-memory-areas-vmmax_map_count-65530-is-too-low-increase-to-at-least-262144">max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</h5>
-<blockquote>
-<p>先要切換到root；</p>
-</blockquote>
-<blockquote>
-<p>然後可以執行以下命令，設置 vm.max_map_count ，但是重啟後又會恢復為預設值。</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sysctl -w vm.max_map_count=<span style="color:#b452cd">262144</span>
-</code></pre></div><blockquote>
-<p>持久性的做法是在 /etc/sysctl.conf 文件中修改 vm.max_map_count 參數</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">echo <span style="color:#cd5555">&#34;vm.max_map_count=262144&#34;</span> &gt; /etc/sysctl.conf
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sysctl -p
-</code></pre></div><h3 id="3開啟瀏覽器">3.開啟瀏覽器:</h3>
-<blockquote>
-<p>PS.如果剛開始會出現error</p>
-</blockquote>
-<p><img src="https://i.imgur.com/9y7N87c.png" alt="image"></p>
-<p>等它跑一下後，
-<img src="https://i.imgur.com/NkyOCbE.png" alt="image"></p>
-<p>瀏覽器網址輸入:</p>
-<p>http://&lt;IP位址&gt;:9200/</p>
-<p>或是</p>
-<p>http://localhost:9200/</p>
-<p>出現以下這個畫面就是Elasticsearch伺服器啟動了~</p>
-<p><img src="/images/post/1634539406470.jpg" alt="image"></p>
-<p>瀏覽器網址再輸入:</p>
-<p>http://&lt;IP位址&gt;:5601/</p>
-<p>或是</p>
-<p>http://localhost:5601/</p>
-<p>就可以進入到Kibana圖形化介面囉~~</p>
-<p><img src="/images/post/1018-1.png" alt="image"></p>
+<p><a href="https://github.com/u3814520/Open_CV">程式碼網址分享</a></p>
 
         </div>
 

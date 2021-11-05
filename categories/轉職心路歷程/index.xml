@@ -6,7 +6,19 @@
     <description>Recent content in 轉職心路歷程 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 18 Oct 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/%E8%BD%89%E8%81%B7%E5%BF%83%E8%B7%AF%E6%AD%B7%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Nov 2021 11:32:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/%E8%BD%89%E8%81%B7%E5%BF%83%E8%B7%AF%E6%AD%B7%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenCV特效影片</title>
+      <link>https://u3814520.github.io/blog/opencv/</link>
+      <pubDate>Fri, 05 Nov 2021 11:32:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/opencv/</guid>
+      <description>轉職學習之路第四個月，來談談OpenCV，
+最近上課教了一些OpenCV效果，
+決定玩玩看結合在一支影片裡，
+想起去年聖誕節前的剪接師日子，剪接似曾相識的節目，其中一首是瑪麗亞凱莉的《All I Want For Christmas Is You》</description>
+    </item>
+    
     <item>
       <title>用 Docker 架設 Elasticsearch &#43; Kibana</title>
       <link>https://u3814520.github.io/blog/elasticsearch/</link>
