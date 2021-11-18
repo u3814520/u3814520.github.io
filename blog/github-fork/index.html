@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>ANN_BLOG</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git合作開發">
+  <meta name="author" content="巧庭_Ann">
+  <meta name="generator" content="Hugo 0.87.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-205131547-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://u3814520.github.io"><img class="img-fluid"
+          src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/u3814520"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/u3814520"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://u3814520.github.io"><img class="img-fluid"
+            src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://u3814520.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://u3814520.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/%e8%bd%89%e8%81%b7%e5%bf%83%e8%b7%af%e6%ad%b7%e7%a8%8b"
+          class="text-primary">轉職心路歷程</a>
+        
+        <h2>Git合作開發</h2>
+        <div class="mb-3 post-meta">
+          <span>By 巧庭_Ann</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>18 November 2021</span>
+          
+        </div>
+        
+        <img src="https://git-scm.com/images/logos/2color-lightbg@2x.png" class="img-fluid w-100 mb-4" alt="Git合作開發">
+        
+        <div class="content mb-5">
+          <h5 id="1-到github網頁的右上角點選fork">1. 到GitHub網頁的右上角點選Fork</h5>
+<p><img src="/images/post/fork.jpg" alt="image"></p>
+<h5 id="2git-clone下來">2.git clone下來</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git clone &lt;合作開發的Code的HTTPS(https://github.com/..../....git)&gt;
+</code></pre></div><h5 id="3-加入remote">3. 加入remote</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote -v  
+</code></pre></div><p>(會看到自己的)</p>
+<p>origin  <a href="https://github.com/u3814520/OpenCV_filters.git">https://github.com/u3814520/OpenCV_filters.git</a> (fetch)</p>
+<p>origin  <a href="https://github.com/u3814520/OpenCV_filters.git">https://github.com/u3814520/OpenCV_filters.git</a> (push)</p>
+<h5 id="4-加入-自己名稱">4. 加入 &lt;自己名稱&gt;</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote add &lt;自己名稱&gt; https://github.com/u3814520/OpenCV_filters.git
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git fetch &lt;自己名稱&gt;
+</code></pre></div><h5 id="5-新增檔案">5. 新增檔案</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git add .
+</code></pre></div><h5 id="6-加入commit">6. 加入commit</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git commit -m <span style="color:#cd5555">&#34;test&#34;</span>
+</code></pre></div><h5 id="7-上傳上去">7. 上傳上去</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git push &lt;自己名稱&gt;
+</code></pre></div><h4 id="本地更新合作開發進度">+++++++++本地更新合作開發進度+++++++++</h4>
+<h5 id="1-加入對方remote">1. 加入對方remote</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote add &lt;給對方名稱&gt; https://github.com/&lt;對方帳號&gt;/OpenCV_filters.git
+</code></pre></div><h5 id="2-到github網頁按merge">2. 到GitHub網頁按merge</h5>
+<p><img src="/images/post/merge.jpg" alt="image"></p>
+<h5 id="3-更新本地資料">3. 更新本地資料</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git pull
+</code></pre></div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var indexURL = "https://u3814520.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://u3814520.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/mark.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://u3814520.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
