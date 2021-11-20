@@ -6,14 +6,25 @@
     <description>Recent content on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 18 Nov 2021 20:36:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 21:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SDS011 PM2.5空氣檢測</title>
+      <link>https://u3814520.github.io/blog/sds011/</link>
+      <pubDate>Sat, 20 Nov 2021 21:09:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/sds011/</guid>
+      <description>檢測動機：  1.我家空氣清淨機到底有沒有效？XD
+  2.流行病學研究結果顯示， PM2.5易附著戴奧辛、多環芳香烴及重金屬等有害物質，長期吸入可能會引起過敏、氣喘、肺氣腫、肺癌、心血管疾病、肝癌、血液疾病等。
+ google一番以下，程式碼分享： import serial import struct from datetime import datetime PORT = &amp;#39;COM3&amp;#39; # 每台電腦不一樣 UMPACK_PAT = &amp;#39;&amp;lt;ccHHHcc&amp;#39; with serial.</description>
+    </item>
+    
     <item>
       <title>Git合作開發</title>
       <link>https://u3814520.github.io/blog/github-fork/</link>
       <pubDate>Thu, 18 Nov 2021 20:36:00 +0800</pubDate>
       
       <guid>https://u3814520.github.io/blog/github-fork/</guid>
-      <description>1. 到GitHub網頁的右上角點選Fork 2.git clone下來 git clone &amp;lt;合作開發的Code的HTTPS(https://github.com/..../....git)&amp;gt; 3. 加入remote git remote -v (會看到自己的)</description>
+      <description>1. 到GitHub網頁的右上角點選Fork 2.到終端機git clone下來 git clone &amp;lt;合作開發的Code的HTTPS(https://github.com/..../....git)&amp;gt; 3. 加入remote git remote -v (會看到自己的)</description>
     </item>
     
     <item>

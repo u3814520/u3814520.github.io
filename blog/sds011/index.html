@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git合作開發">
+  <meta name="description" content="SDS011 PM2.5空氣檢測">
   <meta name="author" content="巧庭_Ann">
   <meta name="generator" content="Hugo 0.87.0" />
 
@@ -118,44 +118,61 @@
         <a href="/categories/%e8%bd%89%e8%81%b7%e5%bf%83%e8%b7%af%e6%ad%b7%e7%a8%8b"
           class="text-primary">轉職心路歷程</a>
         
-        <h2>Git合作開發</h2>
+        <h2>SDS011 PM2.5空氣檢測</h2>
         <div class="mb-3 post-meta">
           <span>By 巧庭_Ann</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 November 2021</span>
+          <span>20 November 2021</span>
           
         </div>
         
-        <img src="https://git-scm.com/images/logos/2color-lightbg@2x.png" class="img-fluid w-100 mb-4" alt="Git合作開發">
+        <img src="https://u3814520.github.io/images/post/SDS011.jpg" class="img-fluid w-100 mb-4" alt="SDS011 PM2.5空氣檢測">
         
         <div class="content mb-5">
-          <h5 id="1-到github網頁的右上角點選fork">1. 到GitHub網頁的右上角點選Fork</h5>
-<p><img src="/images/post/fork.jpg" alt="image"></p>
-<h5 id="2到終端機git-clone下來">2.到終端機git clone下來</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git clone &lt;合作開發的Code的HTTPS(https://github.com/..../....git)&gt;
-</code></pre></div><h5 id="3-加入remote">3. 加入remote</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote -v  
-</code></pre></div><p>(會看到自己的)</p>
-<p>origin  <a href="https://github.com/u3814520/OpenCV_filters.git">https://github.com/u3814520/OpenCV_filters.git</a> (fetch)</p>
-<p>origin  <a href="https://github.com/u3814520/OpenCV_filters.git">https://github.com/u3814520/OpenCV_filters.git</a> (push)</p>
-<h5 id="4-加入-自己名稱">4. 加入 &lt;自己名稱&gt;</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote add &lt;自己名稱&gt; https://github.com/u3814520/OpenCV_filters.git
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git fetch &lt;自己名稱&gt;
-</code></pre></div><h5 id="5-新增檔案">5. 新增檔案</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git add .
-</code></pre></div><h5 id="6-加入commit">6. 加入commit</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git commit -m <span style="color:#cd5555">&#34;test&#34;</span>
-</code></pre></div><h5 id="7-上傳上去">7. 上傳上去</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git push &lt;自己名稱&gt;
-</code></pre></div><h4 id="更新本地合作開發進度">=更新本地合作開發進度=</h4>
-<h5 id="1-加入對方remote">1. 加入對方remote</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git remote add &lt;給對方名稱&gt; https://github.com/&lt;對方帳號&gt;/OpenCV_filters.git
-</code></pre></div><h5 id="2-到github網頁按merge">2. 到GitHub網頁按merge</h5>
-<p><img src="/images/post/merge.jpg" alt="image"></p>
-<h5 id="3-到git終端機更新本地資料">3. 到git終端機更新本地資料</h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">git pull
-</code></pre></div>
+          <h5 id="檢測動機">檢測動機：</h5>
+<blockquote>
+<p>1.我家空氣清淨機到底有沒有效？XD</p>
+</blockquote>
+<blockquote>
+<p>2.流行病學研究結果顯示， PM2.5易附著戴奧辛、多環芳香烴及重金屬等有害物質，長期吸入可能會引起過敏、氣喘、肺氣腫、肺癌、心血管疾病、肝癌、血液疾病等。</p>
+</blockquote>
+<h5 id="google一番以下程式碼分享">google一番以下，程式碼分享：</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8b008b;font-weight:bold">import</span> <span style="color:#008b45;text-decoration:underline">serial</span>
+<span style="color:#8b008b;font-weight:bold">import</span> <span style="color:#008b45;text-decoration:underline">struct</span>
+<span style="color:#8b008b;font-weight:bold">from</span> <span style="color:#008b45;text-decoration:underline">datetime</span> <span style="color:#8b008b;font-weight:bold">import</span> datetime
+
+PORT = <span style="color:#cd5555">&#39;COM3&#39;</span>  <span style="color:#228b22"># 每台電腦不一樣</span>
+
+UMPACK_PAT = <span style="color:#cd5555">&#39;&lt;ccHHHcc&#39;</span>
+
+<span style="color:#8b008b;font-weight:bold">with</span> serial.Serial(PORT, <span style="color:#b452cd">9600</span>, bytesize=<span style="color:#b452cd">8</span>, parity=<span style="color:#cd5555">&#39;N&#39;</span>, stopbits=<span style="color:#b452cd">1</span>) <span style="color:#8b008b;font-weight:bold">as</span> ser:
+    <span style="color:#8b008b;font-weight:bold">while</span> <span style="color:#8b008b;font-weight:bold">True</span>:
+        data = ser.read(<span style="color:#b452cd">10</span>)
+        unpacked = struct.unpack(UMPACK_PAT, data)
+        ts = datetime.now()
+        pm25 = unpacked[<span style="color:#b452cd">2</span>] / <span style="color:#b452cd">10.0</span>
+        pm10 = unpacked[<span style="color:#b452cd">3</span>] / <span style="color:#b452cd">10.0</span>
+        <span style="color:#658b00">print</span>(<span style="color:#cd5555">f</span><span style="color:#cd5555">&#39;</span><span style="color:#cd5555">{</span>ts<span style="color:#cd5555">}</span><span style="color:#cd5555">: PM2.5 = </span><span style="color:#cd5555">{</span>pm25<span style="color:#cd5555">}</span><span style="color:#cd5555"> ,PM10 = </span><span style="color:#cd5555">{</span>pm10<span style="color:#cd5555">}</span><span style="color:#cd5555">&#39;</span>)
+</code></pre></div><p><img src="https://i.imgur.com/4uxDXhp.jpg" alt="image"></p>
+<h5 id="注意事項">注意事項</h5>
+<p>1.問題：</p>
+<p>pip install serial 程式若無法執行</p>
+<p>解決辦法：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip uninstall serial
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install pyserial
+</code></pre></div><p>python3建議先pip install pyserial</p>
+<p>2.問題：</p>
+<p>serial.serialutil.SerialException:系統找不到指定的檔案。</p>
+<p>解決辦法：</p>
+<p>PORT請先到裝置管理員的連接埠(COM和LPT)</p>
+<p><img src="https://github.com/u3814520/air_PM2.5/blob/main/1637160100535.jpg" alt="image"></p>
+<p>3.問題：</p>
+<p>連接埠(COM和LPT)找不到，且USB serial 找不到驅動程式</p>
+<p>解決辦法：</p>
+<p>SDS011插入USB孔後，到以下連結選取該作業系統並下載和安裝</p>
+<p><a href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">驅動程式下載</a></p>
+
         </div>
 
         
