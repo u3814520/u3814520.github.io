@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 20 Nov 2021 21:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Dec 2021 18:46:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux CentOS網卡消失辦法</title>
+      <link>https://u3814520.github.io/blog/linuxip/</link>
+      <pubDate>Sun, 05 Dec 2021 18:46:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/linuxip/</guid>
+      <description>Linux CentOS網卡消失不見   發現網卡不見了,只有lo卡  ifconfig  發現了網卡，但是沒有IP地址  ifconfig -a  解決辦法~~~   查看網卡訊息  sudo lshw -C network 找到logical name  例如:</description>
+    </item>
+    
     <item>
       <title>SDS011 PM2.5空氣檢測</title>
       <link>https://u3814520.github.io/blog/sds011/</link>

@@ -6,27 +6,7 @@
     <description>Recent content in 轉職數據分析師 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 20 Nov 2021 21:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>SDS011 PM2.5空氣檢測</title>
-      <link>https://u3814520.github.io/blog/sds011/</link>
-      <pubDate>Sat, 20 Nov 2021 21:09:00 +0800</pubDate>
-      
-      <guid>https://u3814520.github.io/blog/sds011/</guid>
-      <description>檢測動機：  1.我家空氣清淨機到底有沒有效？XD
-  2.流行病學研究結果顯示， PM2.5易附著戴奧辛、多環芳香烴及重金屬等有害物質，長期吸入可能會引起過敏、氣喘、肺氣腫、肺癌、心血管疾病、肝癌、血液疾病等。
- google一番以下，程式碼分享： import serial import struct from datetime import datetime PORT = &amp;#39;COM3&amp;#39; # 每台電腦不一樣 UMPACK_PAT = &amp;#39;&amp;lt;ccHHHcc&amp;#39; with serial.</description>
-    </item>
-    
-    <item>
-      <title>Git合作開發</title>
-      <link>https://u3814520.github.io/blog/github-fork/</link>
-      <pubDate>Thu, 18 Nov 2021 20:36:00 +0800</pubDate>
-      
-      <guid>https://u3814520.github.io/blog/github-fork/</guid>
-      <description>1. 到GitHub網頁的右上角點選Fork 2.到終端機git clone下來 git clone &amp;lt;合作開發的Code的HTTPS(https://github.com/..../....git)&amp;gt; 3. 加入remote git remote -v (會看到自己的)</description>
-    </item>
-    
+    <lastBuildDate>Fri, 05 Nov 2021 11:32:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/tags/%E8%BD%89%E8%81%B7%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenCV特效影片</title>
       <link>https://u3814520.github.io/blog/opencv/</link>
@@ -37,29 +17,6 @@
 最近上課教了一些OpenCV效果，
 決定玩玩看結合在一支影片裡，
 想起去年聖誕節前的剪接師日子，剪接似曾相識的節目，其中一首是瑪麗亞凱莉的《All I Want For Christmas Is You》</description>
-    </item>
-    
-    <item>
-      <title>用 Docker 架設 Elasticsearch &#43; Kibana</title>
-      <link>https://u3814520.github.io/blog/elasticsearch/</link>
-      <pubDate>Mon, 18 Oct 2021 14:23:00 +0800</pubDate>
-      
-      <guid>https://u3814520.github.io/blog/elasticsearch/</guid>
-      <description>========================
-github直接下載也可以 ========================
-1.新增兩個檔案 檔名為docker-compose.yml version: &amp;#39;2.2&amp;#39; services: es01: image: docker.</description>
-    </item>
-    
-    <item>
-      <title>Python專案和套件打包-上傳PYPI</title>
-      <link>https://u3814520.github.io/blog/pypi-packaging/</link>
-      <pubDate>Sat, 16 Oct 2021 21:53:00 +0800</pubDate>
-      
-      <guid>https://u3814520.github.io/blog/pypi-packaging/</guid>
-      <description>官方文件說明  ======
-第一次打包要做的事 註冊並登入PYPI帳號
-1.到Account settings裡，新增API tokens
-2.複製 tokens</description>
     </item>
     
     <item>
