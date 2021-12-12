@@ -6,7 +6,18 @@
     <description>Recent content in Blogs on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 05 Dec 2021 18:46:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Dec 2021 12:09:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Merge Two Sorted Lists -Python解題</title>
+      <link>https://u3814520.github.io/blog/merge-two-sorted-lists/</link>
+      <pubDate>Sat, 11 Dec 2021 12:09:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/merge-two-sorted-lists/</guid>
+      <description>困難度:Easy
+題目: 簡單來說呢!就是將兩個列表合併為一個排序列表。
+You are given the heads of two sorted linked lists list1 and list2.</description>
+    </item>
+    
     <item>
       <title>Linux CentOS網卡消失辦法</title>
       <link>https://u3814520.github.io/blog/linuxip/</link>
