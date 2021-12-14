@@ -6,7 +6,22 @@
     <description>Recent content in coding人生小筆記 on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 05 Dec 2021 18:46:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/coding%E4%BA%BA%E7%94%9F%E5%B0%8F%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/categories/coding%E4%BA%BA%E7%94%9F%E5%B0%8F%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[關聯式資料庫]MySQL-新增.修改.查詢.刪除</title>
+      <link>https://u3814520.github.io/blog/mysql/</link>
+      <pubDate>Tue, 14 Dec 2021 14:23:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/mysql/</guid>
+      <description>SQL語法算是數據工程師或分析師，必備的技術吧~~
+在關聯式資料庫（RDB）中，資料庫下面可以許多張資料表（table），是由一個或一個以上的資料表所構成
+每個資料表的每一欄都代表一個屬性，每一列都代表一筆資料。
+小小筆記一下囉~~
+ 圖形化介面:
+個人是使用Workbench 或 PopSQL
+安裝筆記就之後再看時間寫囉XD</description>
+    </item>
+    
     <item>
       <title>Linux CentOS網卡消失辦法</title>
       <link>https://u3814520.github.io/blog/linuxip/</link>

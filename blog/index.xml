@@ -6,7 +6,22 @@
     <description>Recent content in Blogs on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 12 Dec 2021 21:35:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Dec 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[關聯式資料庫]MySQL-新增.修改.查詢.刪除</title>
+      <link>https://u3814520.github.io/blog/mysql/</link>
+      <pubDate>Tue, 14 Dec 2021 14:23:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/mysql/</guid>
+      <description>SQL語法算是數據工程師或分析師，必備的技術吧~~
+在關聯式資料庫（RDB）中，資料庫下面可以許多張資料表（table），是由一個或一個以上的資料表所構成
+每個資料表的每一欄都代表一個屬性，每一列都代表一筆資料。
+小小筆記一下囉~~
+ 圖形化介面:
+個人是使用Workbench 或 PopSQL
+安裝筆記就之後再看時間寫囉XD</description>
+    </item>
+    
     <item>
       <title>[AI Big Data班-專題發表]書籍推薦系統</title>
       <link>https://u3814520.github.io/blog/ai-big-data/</link>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>ANN_BLOG</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[關聯式資料庫]MySQL">
+  <meta name="author" content="巧庭_Ann">
+  <meta name="generator" content="Hugo 0.87.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://u3814520.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://u3814520.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-205131547-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://u3814520.github.io"><img class="img-fluid"
+          src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/u3814520"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/u3814520"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://u3814520.github.io"><img class="img-fluid"
+            src="https://u3814520.github.io/images/1628514425799.png" alt="ANN_BLOG"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://u3814520.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://u3814520.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/coding%e4%ba%ba%e7%94%9f%e5%b0%8f%e7%ad%86%e8%a8%98"
+          class="text-primary">Coding人生小筆記</a>
+        
+        <h2>[關聯式資料庫]MySQL-新增.修改.查詢.刪除</h2>
+        <div class="mb-3 post-meta">
+          <span>By 巧庭_Ann</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>14 December 2021</span>
+          
+        </div>
+        
+        <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/6/62/MySQL.svg/1920px-MySQL.svg.png" class="img-fluid w-100 mb-4" alt="[關聯式資料庫]MySQL-新增.修改.查詢.刪除">
+        
+        <div class="content mb-5">
+          <p>SQL語法算是數據工程師或分析師，必備的技術吧~~</p>
+<p>在關聯式資料庫（RDB）中，資料庫下面可以許多張資料表（table），是由一個或一個以上的資料表所構成</p>
+<p>每個資料表的每一欄都代表一個屬性，每一列都代表一筆資料。</p>
+<p>小小筆記一下囉~~</p>
+<blockquote>
+<p>圖形化介面:</p>
+<p>個人是使用Workbench 或 PopSQL</p>
+<p>安裝筆記就之後再看時間寫囉XD</p>
+</blockquote>
+<h4 id="水手範例">水手範例</h4>
+<h5 id="建立刪除資料表">建立、刪除資料表</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">/* 建立sailors資料表，兩個欄位，sname為主鍵，字串型態(最多15字)，rating 為數字型態 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>sname<span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>,<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>rating<span style="color:#bbb"> </span><span style="color:#658b00">INT</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 為主鍵的其他寫法PRIMARY KEY(bname) */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>bname<span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>color<span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">10</span>),<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span>rating<span style="color:#bbb"> </span><span style="color:#658b00">INT</span>,<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>(bname)<span style="color:#bbb">
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 三種組合獨一無二 PRIMARY KEY(sname, bname, day), */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* FOREIGN KEY(外來鍵) 參照TABLE */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">CREATE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>sname<span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NULL</span>,<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>bname<span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#658b00">VARCHAR</span>(<span style="color:#b452cd">15</span>),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">PRIMARY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>(sname,<span style="color:#bbb"> </span>bname,<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">day</span>),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FOREIGN</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>(sname)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">REFERENCES</span><span style="color:#bbb"> </span>sailors(sname),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FOREIGN</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>(bname)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">REFERENCES</span><span style="color:#bbb"> </span>boats(bname),<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FOREIGN</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">KEY</span>(<span style="color:#8b008b;font-weight:bold">day</span>)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">REFERENCES</span><span style="color:#bbb"> </span>days(<span style="color:#8b008b;font-weight:bold">day</span>)<span style="color:#bbb">
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 刪除資料表 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">DROP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>reservations;<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">DROP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">TABLE</span><span style="color:#bbb"> </span>sailors,<span style="color:#bbb"> </span>boats,<span style="color:#bbb"> </span>days;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span></code></pre></div><h5 id="新增資料">新增資料</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Brutus&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">1</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Andy&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">8</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Horatio&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">7</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Rusty&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">8</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Bob&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">1</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;SpeedQueen&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;white&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">9</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Interlake&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">8</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Marine&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;blue&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">7</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Bay&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span>,<span style="color:#bbb"> </span><span style="color:#b452cd">3</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Monday&#39;</span>);<span style="color:#bbb">  
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Tuesday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Wednesday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Thursday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Friday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Saturday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Sunday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Andy&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Interlake&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Monday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Andy&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Bay&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Wednesday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Andy&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Marine&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Saturday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Rusty&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Bay&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Sunday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Rusty&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Interlake&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Wednesday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Rusty&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Marine&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Wednesday&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">INSERT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">INTO</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">VALUES</span><span style="color:#bbb"> </span>(<span style="color:#cd5555">&#39;Bob&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Bay&#39;</span>,<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Monday&#39;</span>);<span style="color:#bbb">
+</span></code></pre></div><h5 id="查詢資料">查詢資料</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#228b22">/* WHERE(指定符合條件可寫可不寫) */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#cd5555">&#34;&#34;&#34;
+</span><span style="color:#cd5555">-- SELECT [DISTINCT] select-list
+</span><span style="color:#cd5555">-- FROM from-list
+</span><span style="color:#cd5555">-- WHERE qualification 
+</span><span style="color:#cd5555">&#34;&#34;&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats;<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days;<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>rating<span style="color:#bbb"> </span>&gt;<span style="color:#bbb"> </span><span style="color:#b452cd">5</span>;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">COUNT</span>(*)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">COUNT</span>(rating)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">SUM</span>(rating)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AVG</span>(rating)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">MAX</span>(rating)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">MIN</span>(rating)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* GROUP BY顏色為主，找出不同的顏色種類() */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>color;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* GROUP BY顏色為主，並計數 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>color,<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">COUNT</span>(*)<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>color;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* ORDER BY查詢並依照順序 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 預設為遞增，DESC為遞減 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">ORDER</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>rating;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>*<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">ORDER</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>rating<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">DESC</span>;<span style="color:#bbb">
+</span></code></pre></div><h5 id="範例查詢資料">範例查詢資料</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#228b22">/* 1. 列出所有在星期三預約的船名 跟它們的顏色 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>b.bname,<span style="color:#bbb"> </span>b.color<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>b,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;Wednesday&#39;</span>;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 2. 列出最高評分的水手 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* (i) 用 MAX */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>s.sname<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span>s<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>s.rating<span style="color:#bbb"> </span>&gt;=<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">max</span>(rating)<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 不用 MAX. */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* NOT EXISTS不需要，除外的 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>s.sname<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span>s<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">EXISTS</span><span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span>(<span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>s2.sname<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span>s2<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>s2.rating<span style="color:#bbb"> </span>&gt;<span style="color:#bbb"> </span>s.rating);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 3. 列出所有有在同一天預約船的水手名字，避免重複 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">DISTINCT</span><span style="color:#bbb"> </span>r1.sname,<span style="color:#bbb"> </span>r2.sname<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r1,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r2<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>r1.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r2.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>r1.sname<span style="color:#bbb"> </span>!=<span style="color:#bbb"> </span>r2.sname;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 4. 每一天，列出那天預約紅色船的數量。
+</span><span style="color:#228b22">如果那天沒紅色船被預約，數字應該是0，如果那一天完全沒有出現在預約表格裡，
+</span><span style="color:#228b22">那天數字也應該要是0。 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span>,<span style="color:#bbb"> </span>ifnull(sub.num,<span style="color:#b452cd">0</span>)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span><span style="color:#658b00">number</span><span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">LEFT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">OUTER</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span>,<span style="color:#8b008b;font-weight:bold">COUNT</span>(*)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span>num<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>b,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.bname=r.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.color=<span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span>)<span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span>sub<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">ON</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>sub.<span style="color:#8b008b;font-weight:bold">day</span>;<span style="color:#bbb"> 
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 5. 列出只有紅船被預約的那些天 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">distinct</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>b,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.bname=r.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.color<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">EXISTS</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>s.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>s,boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span><span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span>.bname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>s.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>s.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span>.color<span style="color:#bbb"> </span>!=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 6. 列出沒有紅船預約的天。如果那天沒出現在預約表格裡，也應該是0。 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">EXISTS</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>b,reservations<span style="color:#bbb"> </span>r<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.color<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">and</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 7. 列出全部紅船都被預約的天，如果不存在紅船，那每天都該吻合。 */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* – 使用 NOT IN */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d1.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> 
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d1<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">IN</span><span style="color:#bbb"> </span>(<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d2.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb">  </span>days<span style="color:#bbb"> </span>d2,<span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span>b<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.color<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">IN</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span>.bname<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>boats<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span>,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>d2.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">c</span>.bname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.bname<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>)<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 使用 NOT EXISTS */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">EXISTS</span><span style="color:#bbb"> </span>(<span style="color:#bbb"> 
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb">  </span>boats<span style="color:#bbb"> </span>b<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.color<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">NOT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">EXISTS</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.bname<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>)<span style="color:#bbb"> 
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 使用 COUNT */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">count</span>(*)<span style="color:#bbb">       
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb">  </span>boats<span style="color:#bbb"> </span>b<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>b.color<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#cd5555">&#39;red&#39;</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">count</span>(*)<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span>=d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>b.bname<span style="color:#bbb"> </span>=r.bname<span style="color:#bbb">
+</span><span style="color:#bbb">        </span>)<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span><span style="color:#b452cd">0</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>)=<span style="color:#b452cd">0</span>;<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 8. 針對出現在預約表裡的天，列出那天所有水手的平均分數。
+</span><span style="color:#228b22">(小心重複的項目) */</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>sub.<span style="color:#8b008b;font-weight:bold">DAY</span>,<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AVG</span>(sub.rat)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span><span style="color:#cd5555">&#34;ave-rating&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">DISTINCT</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">DAY</span>,<span style="color:#bbb"> </span>s.sname,<span style="color:#bbb"> </span>s.rating<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span>rat<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>sailors<span style="color:#bbb"> </span>s,<span style="color:#bbb"> </span>reservations<span style="color:#bbb"> </span>r,<span style="color:#bbb"> </span>days<span style="color:#bbb"> </span>d<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>r.sname<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>s.sname<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AND</span><span style="color:#bbb"> </span>d.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>r.<span style="color:#8b008b;font-weight:bold">day</span>)<span style="color:#bbb"> </span>sub<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span>sub.<span style="color:#8b008b;font-weight:bold">DAY</span>;<span style="color:#bbb"> 
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#228b22">/* 9. 列出最忙的一天，也就是最多預約的一天 */</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>sub1.<span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">FROM</span>(<span style="color:#bbb">  
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">day</span>,<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">COUNT</span>(*)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span>rcount<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>)<span style="color:#bbb"> </span>sub1<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#8b008b;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>sub1.rcount<span style="color:#bbb"> </span>&gt;=<span style="color:#bbb"> </span>(<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">MAX</span>(rcount)<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb">
+</span><span style="color:#bbb">     </span>(<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">COUNT</span>(*)<span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">AS</span><span style="color:#bbb"> </span>rcount<span style="color:#bbb">
+</span><span style="color:#bbb">     </span><span style="color:#8b008b;font-weight:bold">FROM</span><span style="color:#bbb"> </span>reservations<span style="color:#bbb">
+</span><span style="color:#bbb">     </span><span style="color:#8b008b;font-weight:bold">GROUP</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">BY</span><span style="color:#bbb"> </span><span style="color:#8b008b;font-weight:bold">day</span><span style="color:#bbb">
+</span><span style="color:#bbb">     </span>)<span style="color:#bbb"> </span>sub2<span style="color:#bbb">
+</span><span style="color:#bbb"></span>);<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span></code></pre></div><p>其他中文基礎語法教學網站：</p>
+<p><a href="https://blog.techbridge.cc/2020/02/09/sql-basic-tutorial/">https://blog.techbridge.cc/2020/02/09/sql-basic-tutorial/</a></p>
+<p><a href="https://www.fooish.com/sql/syntax.html">https://www.fooish.com/sql/syntax.html</a></p>
+<p><a href="https://www.1keydata.com/tw/sql/sql.html">https://www.1keydata.com/tw/sql/sql.html</a></p>
+
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var indexURL = "https://u3814520.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://u3814520.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/mark.js"></script>
+
+<script src="https://u3814520.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://u3814520.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
