@@ -6,7 +6,23 @@
     <description>Recent content on ANN_BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 14 Dec 2021 14:23:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Dec 2021 18:35:00 +0800</lastBuildDate><atom:link href="https://u3814520.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI Big Data班-專題發表]書籍推薦系統</title>
+      <link>https://u3814520.github.io/blog/ai-big-data/</link>
+      <pubDate>Wed, 29 Dec 2021 18:35:00 +0800</pubDate>
+      
+      <guid>https://u3814520.github.io/blog/ai-big-data/</guid>
+      <description>從2021年07月07日開訓，到2021年12月09日終於於結訓啦～
+專題題目：BOOK私藝-書籍推薦系統
+專題動機：網路上相同主題書籍很多，但要找到適合自己書籍，總是要翻遍許多網站，對使用者耗時不便。
+ 補充一個小故事吧~~
+當時因為同學們都很積極學習，聊天時，都會討論最近買了什麼關於程式語言的書，
+有一次有一個同學說：聽到天瓏書局的老闆在問為什麼沒有一個方便的找書系統?
+於是我們專題題目就出爐啦~~
+ 功能導向：本專案設計採用依”個人化”面向切入，製作推薦適合書籍的功能，以滿足使用者的需求。</description>
+    </item>
+    
     <item>
       <title>[關聯式資料庫]MySQL-新增.修改.查詢.刪除</title>
       <link>https://u3814520.github.io/blog/mysql/</link>
