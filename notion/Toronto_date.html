@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toronto_date</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .date {
+      font-family: Trebuchet MS, sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      color: #ff6781;
+    }
+    @media (max-width: 768px) {
+      .date {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <span class="date" id="date"></span>
+
+  <script>
+    // 取得當地時間
+    var now = new Date();
+
+    // 轉換成當地時間
+    var torontoTime = now.toLocaleString("en-US", {timeZone: "America/Toronto"});
+
+    // 取得年、月、日
+    var torontoYear = new Date(torontoTime).getFullYear();
+    var torontoMonth = new Date(torontoTime).getMonth() + 1;
+    var torontoDay = new Date(torontoTime).getDate();
+
+    // 將年、月、日顯示在網頁上
+    var dateElement = document.getElementById("date");
+    dateElement.innerHTML = torontoYear + "年" + torontoMonth + "月" + torontoDay + "日";
+  </script>
+</body>
+</html>

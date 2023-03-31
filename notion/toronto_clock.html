@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toronto time</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1, #date, #time, #weekday, #timezone {
+        text-align: center;
+        color: #fc88f3;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      #date {
+        margin-top: 10px;
+      }
+      #date, #time, #weekday {
+        font-size: 2em;
+      }
+      #timezone {
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 200px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        font-family: Comic Sans MS, sans-serif; /* 新增的字體屬性 */
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Toronto time</h1>
+      <div id="date"></div>
+      <div id="time"></div>
+      <div id="weekday"></div>
+    </div>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('en');
+        const timeStr = now.toLocaleTimeString('en');
+        const weekdayStr = now.toLocaleDateString('en', { weekday: 'long' });
+        document.getElementById("date").innerText = `${dateStr}`;
+        document.getElementById("time").innerText = `${timeStr}`;
+        document.getElementById("weekday").innerText = `${weekdayStr}`;
+      }
+      setInterval(updateTime, 1000); //每秒更新一次
+    </script>
+  </body>
+</html>
