@@ -53,14 +53,12 @@
     <script>
       function updateTime() {
         const now = new Date();
-        const dateStr = now.toLocaleDateString('en');
+        const dateStr = now.toLocaleDateString('en', {timeZone: 'America/Toronto'});
         const timeStr = now.toLocaleTimeString('en', {timeZone: 'America/Toronto'});
-        const weekdayStr = now.toLocaleDateString('en', { weekday: 'long' });
-        const timezoneStr = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const weekdayStr = now.toLocaleDateString('en', { weekday: 'long' ,timeZone: 'America/Toronto'});
         document.getElementById("date").innerText = `${dateStr}`;
         document.getElementById("time").innerText = `${timeStr}`;
         document.getElementById("weekday").innerText = `${weekdayStr}`;
-        document.getElementById("timezone").innerText = `Time zone: ${timezoneStr}`;
       }
       setInterval(updateTime, 1000); //每秒更新一次
     </script>
