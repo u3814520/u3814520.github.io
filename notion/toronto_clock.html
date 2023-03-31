@@ -34,7 +34,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 200px;
-        background-color: white;
+        background-color:#a2fadd;
         padding: 20px;
         box-shadow: 0 0 20px rgba(0,0,0,0.2);
         font-family: Comic Sans MS, sans-serif;
@@ -53,12 +53,20 @@
     <script>
       function updateTime() {
         const now = new Date();
-        const dateStr = now.toLocaleDateString('en', {timeZone: 'America/Toronto'});
-        const timeStr = now.toLocaleTimeString('en', {timeZone: 'America/Toronto'});
-        const weekdayStr = now.toLocaleDateString('en', { weekday: 'long' ,timeZone: 'America/Toronto'});
+        const options = {
+          timeZone: 'America/Toronto',
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        };
+        const dateTimeFormat = new Intl.DateTimeFormat('en-US', options);
+        const dateStr = dateTimeFormat.format(now);
+        const timeStr = now.toLocaleTimeString('en-US', {timeZone: 'America/Toronto'});
+        const weekdayStr = dateTimeFormat.format(now);
+        const timezoneStr = 'America/Toronto';
         document.getElementById("date").innerText = `${dateStr}`;
         document.getElementById("time").innerText = `${timeStr}`;
-        document.getElementById("weekday").innerText = `${weekdayStr}`;
       }
       setInterval(updateTime, 1000); //每秒更新一次
     </script>
